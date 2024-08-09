@@ -22,22 +22,16 @@ const Navbar = () => {
                 <div>
                     <ul className="flex gap-2 lg:gap-10 pb-2 md:pb-0 ">
                         <Link to="/" className="hover:text-[#2C2C2C]">Home</Link>
+                        <Link  to="/About" className="hover:text-[#2C2C2C]">About</Link>
                         <div className="dropdown">
-                        <Link  tabIndex={0} role="button" className="hover:text-[#2C2C2C]">Hotels</Link>
-                        <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-40 p-3 shadow flex flex-col gap- text-[#2C2C2C]">
-                            <Link to={`/tire/1`} className="hover:text-[#2C2C2C]"><a>11R22.5</a></Link>
-                            <Link to={`/tire/2`} className="hover:text-[#2C2C2C]"><a>295 60R22.5</a></Link>
-                            <Link to={`/tire/3`} className="hover:text-[#2C2C2C]"><a>295 70R22.5</a></Link>
-                            <Link to={`/tire/4`} className="hover:text-#2C2C2C]"><a>295 80R22.5</a></Link>
-                            <Link to={`/tire/5`} className="hover:text-[#2C2C2C]"><a>315 60R22.5</a></Link>
-                            <Link to={`/tire/6`} className="hover:text-[#2C2C2C]"><a>315 70R22.5</a></Link>
-                            <Link to={`/tire/7`} className="hover:text-[#2C2C2C]"><a>315 80R22.5</a></Link>
-                            <Link to={`/tire/8`} className="hover:text-[#2C2C2C]"><a>385 55R22.5</a></Link>
+                        <Link  tabIndex={0} role="button" className="hover:text-[#2C2C2C]">Services</Link>
+                        <ul tabIndex={0} className="dropdown-content menu bg-[#ffffffa0] z-[1] w-40 p-3 shadow flex flex-col gap-2 text-[#2C2C2C] font-bold text-xl">
+                            <Link to={`/tire/1`} className="hover:text-[#2C2C2C] "><a>Shipping</a></Link>
+                            <Link to={`/tire/2`} className="hover:text-[#2C2C2C] "><a>Tracking</a></Link>
                         </ul>
                         </div>
-                        <Link to="/Contact" className="hover:text-[#2C2C2C]">Flight</Link>
-                        <Link to="/Contact" className="hover:text-[#2C2C2C]">Tour</Link>
-                        <Link  to="/About" className="hover:text-[#2C2C2C]">About</Link>
+                        <Link to="/Contact" className="hover:text-[#2C2C2C]">Support</Link>
+                        <Link to="/Contact" className="hover:text-[#2C2C2C]">Account</Link>
                         <Link  to="/WheelProducts" className="hover:text-[#2C2C2C]">Contact</Link>
                     </ul>
                 </div>

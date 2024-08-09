@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import BannerHeader from "./Compononets/BannerHeader";
-// import Navbar from "./Compononets/Navbar";
+import Footer from "./Compononets/Footer";
 const Root = () => {
     return (
         <div className="w-full">
@@ -8,6 +8,7 @@ const Root = () => {
                 <BannerHeader></BannerHeader>
             </div>
             <Outlet></Outlet>
+            <Footer></Footer>
         </div>
     );
 };
