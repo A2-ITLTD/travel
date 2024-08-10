@@ -7,6 +7,7 @@ import {
 } from "react-router-dom"; 
 import Root from './Root';
 import Home from './Compononets/Home.jsx';
+import Policy from './Compononets/Policy.jsx';
 const router = createBrowserRouter([ 
   {
     path: "/",
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       }, 
+      {
+        path: "/Policy",
+        element: <Policy></Policy>,
+      },
       
     ],
   },

@@ -1,20 +1,20 @@
 import Navbar from "./Navbar";
-import bg1 from '../Images/bg2.jpg';
+import bg6 from '../Images/bg6.jpg';
 const BannerHeader = () => {
     return (
         <div className="relative w-full h-svh shadow-2xl" 
             style={{ 
-                backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url(${bg1})`,
+                backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0)), url(${bg6})`,
                 backgroundSize: 'cover', 
                 backgroundPosition: 'center'
             }}>
             <Navbar></Navbar>
             {/* form */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full md:w-1/2">
-                <div>
-                    <h1 className="text-5xl font-semibold text-white text-center pb-5"> <span className="text-[#1E90FF]">Track Your Parcel</span></h1>
-                </div>
-                <form className="flex flex-col md:flex-row gap-3 md:gap-0 justify-center items-center glass p-10 rounded-md">
+                {/* <div>
+                    <h1 className="text-6xl font-bold text-white text-center pb-5">Track Your Parcel</h1>
+                </div> */}
+                <form className="flex flex-col md:flex-row gap-3 md:gap-0 justify-center items-center glass p-14 rounded-md">
                     <input 
                         type="text" 
                         placeholder="Tracking ID"

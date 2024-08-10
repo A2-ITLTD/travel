@@ -20,6 +20,7 @@ import { FaPhoneSquareAlt } from "react-icons/fa";
 import { PiTruck } from "react-icons/pi";
 import { FaBullseye } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
+import BannerHeader from './BannerHeader';
 const Banner = () => {
 
     const imageDetails = [
@@ -37,19 +38,21 @@ const Banner = () => {
 
     return (
         <div>
+            {/* main banner with navbar */}
+            <BannerHeader></BannerHeader>
             {/* card */}
             <section className='mt-28 mx-5 md:mx-28'>
                 <div className='w-full flex flex-wrap justify-center'>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-20 justify-center items-center'>
-                        <div className='w-64 h-64 bg-[#1E90FF] rounded-md flex flex-col gap-8 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#1E90FF] hover:border-4 hover:border-[#1E90FF]'>
+                        <div className='w-64 h-64 bg-[#045364] rounded-md flex flex-col gap-8 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364]'>
                             <BsBoxSeam className='text-6xl'/>
                             Get Transit Time
                         </div>
-                        <div className='w-64 h-64  bg-[#1E90FF] rounded-md flex flex-col gap-8 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#1E90FF] hover:border-4 hover:border-[#1E90FF]'>
+                        <div className='w-64 h-64  bg-[#045364] rounded-md flex flex-col gap-8 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364]'>
                             <TbCurrentLocation className='text-6xl' />
                             Track Parcel
                         </div>
-                        <div className='w-64 h-64 bg-[#1E90FF] rounded-md flex flex-col gap-8 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#1E90FF] hover:border-4 hover:border-[#1E90FF]'>
+                        <div className='w-64 h-64 bg-[#045364] rounded-md flex flex-col gap-8 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364]'>
                             <PiTruck className='text-6xl' />
                             Ship Oversea
                         </div>
@@ -59,7 +62,7 @@ const Banner = () => {
             {/* popular destinations */}
             <section className='mt-28'>
            <div className="px-5 md:px-10 lg:px-28 mb-12 items-left">
-                    <div className="text-3xl lg:text-4xl font-bold text-[#1E90FF] w-full lg:w-2/3 text-left" >Location We Deliver To</div>
+                    <div className="text-3xl lg:text-4xl font-bold text-[#045364] w-full lg:w-2/3 text-left" >Location We Deliver To</div>
             </div>
            <div className='px-5 md:px-28'>
             <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true} showStatus={false} interval={3000}>
@@ -91,11 +94,11 @@ const Banner = () => {
                 <div className='flex flex-col md:flex-row justify-center items-top gap-14 p-10'>
                     <div className='w-full md:w-1/2'>
                         <div className='flex flex-col gap-20 text-left'>
-                            <h1 className='text-5xl font-bold text-[#1E90FF] text-wrap'>Port and shipping agents you can rely on.</h1>
+                            <h1 className='text-5xl font-bold text-[#045364] text-wrap'>Port and shipping agents you can rely on.</h1>
                             <p className='text-lg font-normal text-gray-700 text-wrap'>As port agents, we provide comprehensive services for managing operations across all types of cargo.</p>
                         </div>
                         <div className='flex flex-col gap-5 text-left pl-10 pt-10'>
-                            <h1 className='text-4xl font-bold text-[#1E90FF] text-wrap flex gap-4 items-center'>
+                            <h1 className='text-4xl font-bold text-[#045364] text-wrap flex gap-4 items-center'>
                                 <FaBullseye />
                                 How we works
                             </h1>
@@ -120,7 +123,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className='flex flex-col gap-6 justify-start items-center'>
-                    <h1 className='text-4xl font-bold text-[#1E90FF] text-wrap pb-5'>To accomplish our goal, we offer:</h1>
+                    <h1 className='text-4xl font-bold text-[#045364] text-wrap pb-5'>To accomplish our goal, we offer:</h1>
                     <div className="collapse collapse-arrow bg-base-200 text-gray-700">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title text-xl font-medium">Effective oversight</div>
@@ -147,7 +150,7 @@ const Banner = () => {
                     </div>
                     </div>
                 </div>
-                <div className='bg-[#1E90FF] rounded-md p-12 flex flex-col gap-5'>
+                <div className='bg-[#045364] rounded-md p-12 flex flex-col gap-5'>
                     <h1 className='text-3xl font-bold text-white text-wrap pb-5'>Our primary project</h1>
                     <p className='text-base font-normal text-white text-justify text-wrap'>
                     Streamline communication to reduce delays  
@@ -158,7 +161,7 @@ const Banner = () => {
             </section>
             {/* statics */}
             <section className='mt-28'>
-                <div className='bg-[#1E90FF] p-10'>
+                <div className='bg-[#045364] p-10'>
                     <div className='flex flex-col md:flex-row gap-4 md:gap-0 justify-evenly items-center text-3xl text-white'>
                         <div className='flex gap-5 flex-col justify-center items-center'>Shipments <span>150</span></div>
                         <hr className="w-[2px] h-28 bg-white" />
@@ -179,11 +182,11 @@ const Banner = () => {
                 backgroundPosition: 'center'
                 }}>
                     <div className='absolute glass rounded-md p-16 left-10 md:left-16 bottom-24 flex flex-col gap-3'>
-                        <h1 className='text-4xl font-semibold text-[#1E90FF] pb-5'>Dhaka, Bangladesh</h1>
-                        <p className='text-lg font-semibold text-[#1E90FF] flex gap-2 items-center'><MdOutlineSupportAgent /> support care 24/7</p>
-                        <p className='text-lg font-semibold text-[#1E90FF] flex gap-2 items-center '><FaPhoneSquareAlt />Phone: +39 080 2450044</p>
-                        <p className='text-lg font-semibold text-[#1E90FF] flex gap-2 items-center'><MdOutlineEmail /> Get in touch with us:</p>
-                        <p className='text-lg font-semibold text-[#1E90FF]'>info@seawayagency.com</p>
+                        <h1 className='text-4xl font-semibold text-[#045364] pb-5'>Dhaka, Bangladesh</h1>
+                        <p className='text-lg font-semibold text-[#045364] flex gap-2 items-center'><MdOutlineSupportAgent /> support care 24/7</p>
+                        <p className='text-lg font-semibold text-[#045364] flex gap-2 items-center '><FaPhoneSquareAlt />Phone: +39 080 2450044</p>
+                        <p className='text-lg font-semibold text-[#045364] flex gap-2 items-center'><MdOutlineEmail /> Get in touch with us:</p>
+                        <p className='text-lg font-semibold text-[#045364]'>info@seawayagency.com</p>
                     </div>
                 </div>
             </section>

@@ -4,14 +4,18 @@ import twitter from '../Images/twitter.png';
 import instagram from '../Images/instagram.png';
 import whatsapp from '../Images/whatsapp.png';
 import youtube from '../Images/youtube.png';
+import pinterest from '../Images/pinterest.png';
 import { FaRegCopyright } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
+import logo from '../Images/swiftship_logo-removebg.png';
 const Footer = () => {
     return (
-        <div className="bg-[#1E90FF] p-10">
+        <div className="bg-[#045364] p-10">
             <div className="px-5 md:px-28 pt-20 pb-10 flex flex-col gap-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 justify-evenly text-white">
                 <div className="flex flex-col gap-2">
                     <h1 className="text-xl font-semibold">About Company</h1>
+                    <Link to="/Policy">Privacy & Policy</Link>
                     <p>Tracking</p>
                     <p>Our Story</p>
                     <p>Blog</p>
@@ -39,8 +43,9 @@ const Footer = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 items-center justify-evenly text-white">
                 <div>
-                    <h1 className="text-4xl font-semibold">Logo</h1>
-                    {/* <img src="" alt="" /> */}
+                    <div className="">
+                        <img src={logo} alt="logo" className="h-36 md:w-32 md:h-32" />
+                    </div>
                 </div>
                 <div>
                     <p className="text-xl font-semibold">Call Us <span>00000000</span>or Email Us <span>xxxxxx@gmail.com</span></p>
@@ -53,6 +58,7 @@ const Footer = () => {
                         <img src={instagram} className='w-12'/>
                         <img src={whatsapp} className='w-12'/>
                         <img src={youtube} className='w-12'/>
+                        <img src={pinterest} className='w-12'/>
                     </div>
                 </div>
                
