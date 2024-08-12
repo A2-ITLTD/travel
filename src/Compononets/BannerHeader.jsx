@@ -14,7 +14,7 @@ const BannerHeader = () => {
                 {/* <div>
                     <h1 className="text-6xl font-bold text-white text-center pb-5">Track Your Parcel</h1>
                 </div> */}
-                <form className="flex flex-col md:flex-row gap-3 md:gap-0 justify-center items-center glass p-14 rounded-md">
+                <form className="flex -z-0 flex-col md:flex-row gap-3 md:gap-0 justify-center items-center glass p-14 rounded-md">
                     <input 
                         type="text" 
                         placeholder="Tracking ID"

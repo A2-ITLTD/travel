@@ -8,6 +8,8 @@ import {
 import Root from './Root';
 import Home from './Compononets/Home.jsx';
 import Policy from './Compononets/Policy.jsx';
+import ShippingTools from './Compononets/ShippingTools.jsx';
+import Supplies from './Compononets/Supplies.jsx';
 const router = createBrowserRouter([ 
   {
     path: "/",
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
       {
         path: "/Policy",
         element: <Policy></Policy>,
+      },
+      {
+        path: "/ShippingTools",
+        element: <ShippingTools></ShippingTools>,
+      },
+      {
+        path: "/Supplies",
+        element: <Supplies></Supplies>,
       },
       
     ],
