@@ -13,6 +13,7 @@ import im8 from '../Images/destination/im8.jpeg';
 import bg3 from '../Images/bg3.jpg';
 import bg4 from '../Images/bg4.jpg';
 import bg5 from '../Images/bg5.png';
+import orangebg from '../Images/orangebg.jpg';
 import { BsBoxSeam } from "react-icons/bs";
 import { TbCurrentLocation } from "react-icons/tb";
 import { MdOutlineSupportAgent } from "react-icons/md";
@@ -21,6 +22,8 @@ import { PiTruck } from "react-icons/pi";
 import { FaBullseye } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import BannerHeader from './BannerHeader';
+import { AiOutlineAlibaba } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 const Banner = () => {
 
     const imageDetails = [
@@ -88,6 +91,15 @@ const Banner = () => {
             </div>
                 </Carousel>
            </div>
+            </section>
+            {/* alibab button */}
+            <section className="mt-28 relative w-full h-32 rounded-md flex items-center justify-center">
+                <img src={orangebg} className='absolute inset-0 w-full h-full object-cover object-left md:object-center rounded-md' />
+                <div className='relative z-10'>
+                    <Link to="/" className='flex gap-2 items-center bg-white hover:bg-slate-200 text-[#FF6701] text-sm md:text-2xl font-bold py-2 px-3 md:px-8 rounded-md'>
+                    Get In Touch With Alibaba <AiOutlineAlibaba className='text-base md:text-5xl' />
+                    </Link>
+                </div>
             </section>
             {/* port and ship agents */}
             <section className='mt-28  px-5 md:px-28'>

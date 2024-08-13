@@ -10,6 +10,8 @@ import Home from './Compononets/Home.jsx';
 import Policy from './Compononets/Policy.jsx';
 import ShippingTools from './Compononets/ShippingTools.jsx';
 import Supplies from './Compononets/Supplies.jsx';
+import About from './Compononets/About.jsx';
+import Contactus from './Compononets/Contactus.jsx';
 const router = createBrowserRouter([ 
   {
     path: "/",
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
       {
         path: "/Supplies",
         element: <Supplies></Supplies>,
+      },
+      {
+        path: "/About",
+        element: <About></About>,
+      },
+      {
+        path: "/Contact",
+        element: <Contactus></Contactus>,
       },
       
     ],

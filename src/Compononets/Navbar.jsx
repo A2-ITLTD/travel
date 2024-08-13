@@ -23,15 +23,15 @@ const Navbar = () => {
                 </div>
                 <div>
                     <ul className="flex gap-2 lg:gap-10 pb-2 md:pb-0 ">
-                        <Link to="/" className="hover:text-[#2C2C2C]">Home</Link>
-                        <Link  to="/About" className="hover:text-[#2C2C2C]">About</Link>
-                        <Link to="/Contact" className="hover:text-[#2C2C2C]">Support</Link>
-                        <Link to="/Contact" className="hover:text-[#2C2C2C]">Account</Link>
+                        <Link to="/" className="hover:text-[#53fff4]">Home</Link>
+                        <Link  to="/About" className="hover:text-[#53fff4]">About</Link>
+                        <Link to="/Contact" className="hover:text-[#53fff4]">Support</Link>
+                        <Link to="/Contact" className="hover:text-[#53fff4]">Account</Link>
                         
                         <details className="dropdown">
                             <summary  
                                 onClick={() => setArrow(!arrow)}  
-                                className="hover:text-[#2C2C2C] flex gap-2 items-center">
+                                className="hover:text-[#53fff4] flex gap-2 items-center">
                             Services {
                                     arrow ? <BiSolidDownArrow /> : <BiSolidUpArrow />
                                     }
@@ -61,7 +61,7 @@ const Navbar = () => {
                             </ul>
                         </details>
 
-                        <Link  to="/WheelProducts" className="hover:text-[#2C2C2C]">Contact</Link>
+                        <Link  to="/Contact" className="hover:text-[#53fff4]">Contact</Link>
                     </ul>
                 </div>
             </div>

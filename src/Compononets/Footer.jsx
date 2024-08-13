@@ -35,10 +35,10 @@ const Footer = () => {
                     <h1 className="text-xl font-semibold">More Services</h1>
                     <p>Fullfillment</p>
                     <p>Call Center</p>
-                    <p>BKash on Delivery</p>
+                    <p>International Payment Gateways</p>
                     <p>Parcel Pick and Drop Service</p>
-                    <p>Booster SMS</p>
-                    <p>Mobile Top-Up</p>
+                    <p>Paypal</p>
+                    <p>Stripe</p>
                 </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 items-center justify-evenly text-white">
