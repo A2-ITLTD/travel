@@ -1,13 +1,11 @@
 import { Outlet } from "react-router-dom";
-// import BannerHeader from "./Compononets/BannerHeader";
 import Footer from "./Compononets/Footer";
 import whatsapp from './Images/whatsapp.png';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Root = () => {
     return (
         <div className="w-full">
-            {/* <div>
-                <BannerHeader></BannerHeader>
-            </div> */}
             <Outlet></Outlet>
             <Footer></Footer>
             <div className="fixed bottom-6 right-6">
@@ -15,6 +13,7 @@ const Root = () => {
                     <img src={whatsapp} className="w-20" title="Chat with Us" />
                 </a>
             </div>
+            <ToastContainer position="top-center" />
         </div>
     );
 };

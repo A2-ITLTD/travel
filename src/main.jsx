@@ -12,6 +12,11 @@ import ShippingTools from './Compononets/ShippingTools.jsx';
 import Supplies from './Compononets/Supplies.jsx';
 import About from './Compononets/About.jsx';
 import Contactus from './Compononets/Contactus.jsx';
+import Support from './Compononets/Support.jsx';
+import AuthProvider from './Compononets/AuthProvider.jsx';
+import PrivateRoute from './Compononets/PrivateRoute.jsx';
+import Login from './Compononets/Login.jsx';
+import Registration from './Compononets/Registration.jsx';
 const router = createBrowserRouter([ 
   {
     path: "/",
@@ -22,12 +27,20 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       }, 
       {
+        path: "/Login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/Registration",
+        element: <Registration></Registration>,
+      },
+      {
         path: "/Policy",
         element: <Policy></Policy>,
       },
       {
         path: "/ShippingTools",
-        element: <ShippingTools></ShippingTools>,
+        element: <PrivateRoute><ShippingTools></ShippingTools></PrivateRoute>,
       },
       {
         path: "/Supplies",
@@ -41,14 +54,20 @@ const router = createBrowserRouter([
         path: "/Contact",
         element: <Contactus></Contactus>,
       },
+      {
+        path: "/Support",
+        element: <Support></Support>,
+      },
       
     ],
   },
 ]); 
  
 ReactDOM.createRoot(document.getElementById("root")).render( 
- <React.StrictMode> 
- <RouterProvider router={router} /> 
+ <React.StrictMode>
+  <AuthProvider>
+    <RouterProvider router={router} /> 
+  </AuthProvider>
  </React.StrictMode> 
 ); 
 

@@ -48,7 +48,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <p className="text-xl font-semibold">Call Us <span>00000000</span>or Email Us <span>xxxxxx@gmail.com</span></p>
+                    <p className="text-xl font-semibold">Call Us <span>+8801846937397</span> or Email Us <span>swiftship@asianclothify.com</span></p>
                 </div>
                 <div>
                     <div className='flex flex-wrap gap-3 justify-center items-center'>

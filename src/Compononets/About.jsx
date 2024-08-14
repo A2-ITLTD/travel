@@ -53,7 +53,7 @@ const About = () => {
                         <div className='w-80 h-96 bg-[#045364] rounded-md flex flex-col gap-7 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364] px-5'>
                             <BsInfoSquareFill className='text-4xl'/>
                             Global Newsroom
-                            <p className="text-base font-normal text-center">The latest local market and corporate press releases are available for viewing..</p>
+                            <p className="text-base font-normal text-center">The latest local market and corporate press releases are available for viewing.</p>
                             <button className="px-8 py-2 border-2 border-white text-base font-normal">Learn More</button>
                         </div>
 

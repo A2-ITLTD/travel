@@ -1,8 +1,5 @@
 import Navbar from "./Navbar";
 import bg7 from '../Images/bg7.jpg';
-import bg14 from '../Images/bg14.png';
-import bg15 from '../Images/bg15.jpg';
-import { BsInfoSquareFill } from "react-icons/bs";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 const Contactus = () => {
@@ -18,7 +15,7 @@ const Contactus = () => {
         const message = e.target.elements.message.value;
         
         // send message to whatsapp
-        const whatsappNumber = "+8801871733305" 
+        const whatsappNumber = "+8801846937397" 
 
 
         var url = "https://wa.me/" + whatsappNumber + "?text="
