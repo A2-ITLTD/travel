@@ -57,7 +57,6 @@ const Navbar = () => {
                         <Link to="/" className="hover:text-[#53fff4]">Home</Link>
                         <Link  to="/About" className="hover:text-[#53fff4]">About</Link>
                         <Link to="/Support" className="hover:text-[#53fff4]">Support</Link>
-                        <Link to="/Contact" className="hover:text-[#53fff4]">Account</Link>
                         
                         <details className="dropdown">
                             <summary  
@@ -79,11 +78,11 @@ const Navbar = () => {
                                             }
                                     </summary>
                                     <ul tabIndex={0} className="dropdown-content menu glass bg-[#ffffffbe] z-[1] w-72 p-3 shadow flex flex-col gap-2 text-[#2C2C2C] font-bold text-base ml-24">
-                                        <Link to={`/tire/1`} className="hover:text-[#2C2C2C] "><a>Ship All Feature</a></Link>
-                                        <Link to={`/tire/2`} className="hover:text-[#2C2C2C] "><a>Ship Quick And Simple</a></Link>
+                                        <Link to="/shipservice" className="hover:text-[#2C2C2C] "><a>Shipping Services</a></Link>
+                                        <Link to="/shipquick" className="hover:text-[#2C2C2C] "><a>Ship Quick And Simple</a></Link>
                                         <Link to="/ShippingTools" className="hover:text-[#2C2C2C] "><a>Shipping Tools</a></Link>
-                                        <Link to={`/tire/2`} className="hover:text-[#2C2C2C] "><a>Get Transit Times</a></Link>
-                                        <Link to={`/tire/2`} className="hover:text-[#2C2C2C] "><a>Schedule and Manage Pickups</a></Link>
+                                        <Link to="/timetable" className="hover:text-[#2C2C2C] "><a>Get Transit Times</a></Link>
+                                        {/* <Link to={`/tire/2`} className="hover:text-[#2C2C2C] "><a>Schedule and Manage Pickups</a></Link> */}
                                         <Link to="/Supplies" className="hover:text-[#2C2C2C] "><a>Packaging & Shipping Supplies</a></Link>
                                     </ul>
                                 </details>

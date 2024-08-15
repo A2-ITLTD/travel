@@ -47,18 +47,18 @@ const Banner = () => {
             <section className='mt-28 mx-5 md:mx-28'>
                 <div className='w-full flex flex-wrap justify-center'>
                     <div className='grid grid-cols-1 md:grid-cols-3 gap-20 justify-center items-center'>
-                        <div className='w-64 h-64 bg-[#045364] rounded-md flex flex-col gap-8 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364]'>
+                        <Link to="/timetable" className='w-64 h-64 bg-[#045364] rounded-md flex flex-col gap-8 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364]'>
                             <BsBoxSeam className='text-6xl'/>
                             Get Transit Time
-                        </div>
-                        <div className='w-64 h-64  bg-[#045364] rounded-md flex flex-col gap-8 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364]'>
+                        </Link>
+                        <Link className='w-64 h-64  bg-[#045364] rounded-md flex flex-col gap-8 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364]'>
                             <TbCurrentLocation className='text-6xl' />
                             Track Parcel
-                        </div>
-                        <div className='w-64 h-64 bg-[#045364] rounded-md flex flex-col gap-8 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364]'>
+                        </Link>
+                        <Link to="/shipquick" className='w-64 h-64 bg-[#045364] rounded-md flex flex-col gap-8 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364]'>
                             <PiTruck className='text-6xl' />
                             Ship Oversea
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -196,9 +196,9 @@ const Banner = () => {
                     <div className='absolute glass rounded-md p-16 left-10 md:left-16 bottom-24 flex flex-col gap-3'>
                         <h1 className='text-4xl font-semibold text-[#045364] pb-5'>Dhaka, Bangladesh</h1>
                         <p className='text-lg font-semibold text-[#045364] flex gap-2 items-center'><MdOutlineSupportAgent /> support care 24/7</p>
-                        <p className='text-lg font-semibold text-[#045364] flex gap-2 items-center '><FaPhoneSquareAlt />Phone: +39 080 2450044</p>
+                        <p className='text-lg font-semibold text-[#045364] flex gap-2 items-center '><FaPhoneSquareAlt />Phone: +8801846937397</p>
                         <p className='text-lg font-semibold text-[#045364] flex gap-2 items-center'><MdOutlineEmail /> Get in touch with us:</p>
-                        <p className='text-lg font-semibold text-[#045364]'>info@seawayagency.com</p>
+                        <p className='text-lg font-semibold text-[#045364]'>swiftship@asianclothify.com</p>
                     </div>
                 </div>
             </section>

@@ -17,6 +17,9 @@ import AuthProvider from './Compononets/AuthProvider.jsx';
 import PrivateRoute from './Compononets/PrivateRoute.jsx';
 import Login from './Compononets/Login.jsx';
 import Registration from './Compononets/Registration.jsx';
+import ShipQuick from './Compononets/ShipQuick.jsx';
+import ShipService from './Compononets/ShipService.jsx';
+import TimeTable from './Compononets/TimeTable.jsx';
 const router = createBrowserRouter([ 
   {
     path: "/",
@@ -44,7 +47,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/Supplies",
-        element: <Supplies></Supplies>,
+        element: <PrivateRoute><Supplies></Supplies></PrivateRoute>,
       },
       {
         path: "/About",
@@ -57,6 +60,18 @@ const router = createBrowserRouter([
       {
         path: "/Support",
         element: <Support></Support>,
+      },
+      {
+        path: "/shipquick",
+        element: <PrivateRoute><ShipQuick></ShipQuick></PrivateRoute>,
+      },
+      {
+        path: "/shipservice",
+        element: <PrivateRoute><ShipService></ShipService></PrivateRoute>,
+      },
+      {
+        path: "/timetable",
+        element: <PrivateRoute><TimeTable></TimeTable></PrivateRoute>,
       },
       
     ],

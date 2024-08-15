@@ -118,7 +118,7 @@ const Registration = () => {
                         <br />
                         <div className="flex justify-center text-center gap-2 px-9">
                             <p className="text-white">Already have and account ?
-                            <Link to="/Login"className="text-[#02413c]  font-bold pacifico"> Login </Link>
+                            <Link to="/Login"className="text-[#53fff4]  font-bold"> Login </Link>
                             </p>
                         </div>
                     </form>

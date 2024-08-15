@@ -8,6 +8,12 @@ import pinterest from '../Images/pinterest.png';
 import { FaRegCopyright } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import logo from '../Images/swiftship_logo-removebg.png';
+import { FaCcVisa } from "react-icons/fa";
+import { FaCcMastercard } from "react-icons/fa6";
+import { SiAmericanexpress } from "react-icons/si";
+import { ImPaypal } from "react-icons/im";
+import { FaCcStripe } from "react-icons/fa";
+import { BsBank2 } from "react-icons/bs";
 const Footer = () => {
     return (
         <div className="bg-[#045364] p-10">
@@ -35,10 +41,16 @@ const Footer = () => {
                     <h1 className="text-xl font-semibold">More Services</h1>
                     <p>Fullfillment</p>
                     <p>Call Center</p>
-                    <p>International Payment Gateways</p>
                     <p>Parcel Pick and Drop Service</p>
-                    <p>Paypal</p>
-                    <p>Stripe</p>
+                    <p>International Payment Gateways</p>
+                    <div className='flex items-center gap-4 flex-wrap text-white text-4xl pt-5'>
+                        <FaCcVisa />
+                        <FaCcMastercard />
+                        <SiAmericanexpress />
+                        <ImPaypal />
+                        <FaCcStripe />
+                        <BsBank2 />
+                    </div>
                 </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 items-center justify-evenly text-white">
