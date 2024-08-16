@@ -17,7 +17,7 @@ const UpdateTrack = () => {
         console.log(typeof Id);
     
         try {
-            const response = await axios.get(`http://localhost:5000/track/${Id}`);
+            const response = await axios.get(`swiftship-server-kohl.vercel.app/track/${Id}`);
             setSelectTrack(response.data[0]); 
             document.getElementById('my_modal_3').showModal();
         } catch (error) {
@@ -44,7 +44,7 @@ const UpdateTrack = () => {
 
         const updated = {orderPlaced, packageProcessingStarted, redayToShip, reachedLogistic,shipped,  outForDelivery, outForDelivery, delivered, deliveryFailed };
 
-        axios.put( `http://localhost:5000/track/update/${orderId}`, updated)
+        axios.put( `swiftship-server-kohl.vercel.app/track/update/${orderId}`, updated)
         .then(data => {
             if(data.data.modifiedCount > 0){
                 toast.success("Updated Successfully");

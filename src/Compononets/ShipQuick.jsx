@@ -95,11 +95,11 @@ const ShipQuick = () => {
         // window.open(url, '_blank').focus();
 
         // fetch data using axios 
-        axios.post('http://localhost:5000/orders', newOrders)
+        axios.post('swiftship-server-kohl.vercel.app/orders', newOrders)
           .then(data => {
             if(data.data.insertedId){
                 //   post to track list
-                axios.post('http://localhost:5000/track', newTrack )
+                axios.post('swiftship-server-kohl.vercel.app/track', newTrack )
                 .then(data => {
                 if(data.data.insertedId){
                     toast.success(`Order Placed successfully. Your Order ID: ${orderId}. Please note that to track your order`);
