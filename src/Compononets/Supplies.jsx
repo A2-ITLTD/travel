@@ -16,12 +16,12 @@ const Supplies= () => {
             <Navbar></Navbar>
             <div className="absolute top-1/2 left-5 md:left-20 p-5">
                 <div>
-                    <h1 className="text-6xl font-bold text-white text-ceter pb-10">Packaging and Shipping Supplies</h1>
+                    <h1 className="text-2xl md:text-6xl font-bold text-white text-center pb-10">Packaging and Shipping Supplies</h1>
                     <p className="text-2xl font-normal text-white text-justify text-wrap">Discover everything you need to know about packaging and shipping supplies. <br /> Benefit from our packaging tips to pack shipments yourself.</p>
                 </div>
             </div>
             </div>
-            <div className="my-28 px-10 md:px-72 mx-auto">
+            <div className="my-5 md:my-20 lg:my-28 px-10 md:px-10 lg:px-72 mx-auto">
                 <div className='mt-10 grid grid-cols-1 md:grid-cols-2 justify-between gap-14 items-center'>  
                     {/* card 1 */}
                     <div className='w-full  h-96 rounded-md flex flex-col gap-7 justify-center items-center text-2xl  font-semibold hover:bg-white text-[#045364] border-4 border-[#045364]'>
@@ -39,7 +39,7 @@ const Supplies= () => {
                         <button className="px-8 py-2 text-white bg-[#045364] border-2 border-white text-base font-normal">Shipping Rates</button>
                     </div>
                 </div>
-                <div className="mt-20 flex items-center top gap-10">
+                <div className="mt-20 flex flex-col md:flex-row items-center top gap-10">
                     <div className="w-full md:w-1/2 h-ull">
                         <div className='w-full h-ull rounded-md'>
                             <img src={bg12} className='w-full h-full object-cover object-left rounded-md' />
@@ -51,7 +51,7 @@ const Supplies= () => {
                         <button className="text-2xl px-8 py-3 w-fit rounded bg-[#045364] text-white">Exploring</button>
                     </div>
                 </div>
-                <div className="mt-20 flex flex-row-reverse items-center top gap-10">
+                <div className="mt-20 flex flex-col md:flex-row-reverse items-center top gap-10">
                     <div className="w-full md:w-1/2 h-ull">
                         <div className='w-full h-ull rounded-md'>
                             <img src={bg13} className='w-full h-full object-cover object-left rounded-md' />

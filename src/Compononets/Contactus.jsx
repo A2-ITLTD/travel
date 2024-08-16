@@ -45,14 +45,14 @@ const Contactus = () => {
                 backgroundPosition: 'center'
             }}>
             <Navbar></Navbar>
-            <div className="flex justify-between gap-20 items-center w-4/5 mx-auto py-10">
+            <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-20 items-center w-4/5 mx-auto py-10">
                 <div className="p-5 ">
                     <div>
                         <h1 className="text-6xl font-bold text-white text-ceter pb-10">Reach Us Now !</h1>
                     </div>
                 </div>
                 {/* form */}
-                <div className="w-1/2 glass p-10 rounded-md">
+                <div className="w-full md:w-1/2 glass p-10 rounded-md">
                 <form onSubmit={handleOrder} className='flex flex-col w-full gap-5 border-none'>
                     <input type="text" name="user_name" placeholder='Name' className='py-2 px-5 rounded text-base text-black' />
                     <input 

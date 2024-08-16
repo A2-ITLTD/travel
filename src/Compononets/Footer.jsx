@@ -16,7 +16,7 @@ import { FaCcStripe } from "react-icons/fa";
 import { BsBank2 } from "react-icons/bs";
 const Footer = () => {
     return (
-        <div className="bg-[#045364] p-10">
+        <div className="bg-[#045364] p-3 md:p-10">
             <div className="px-5 md:px-28 pt-20 pb-10 flex flex-col gap-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 justify-evenly text-white">
                 <div className="flex flex-col gap-2">
@@ -60,7 +60,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <p className="text-xl font-semibold">Call Us <span>+8801846937397</span> or Email Us <span>swiftship@asianclothify.com</span></p>
+                    <p className="text-sm md:text-xl font-semibold">Call Us <span>+8801846937397</span> or Email Us <span>swiftship@asianclothify.com</span></p>
                 </div>
                 <div>
                     <div className='flex flex-wrap gap-3 justify-center items-center'>

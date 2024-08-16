@@ -18,43 +18,43 @@ const ShippingTools = () => {
             <Navbar></Navbar>
             <div className="absolute top-1/2 left-5 md:left-20 p-5">
                 <div>
-                    <h1 className="text-6xl font-bold text-white text-ceter pb-10">Discover our shipping tools</h1>
+                    <h1 className="text-2xl md:text-6xl font-bold text-white text-ceter pb-10">Discover our shipping tools</h1>
                     <p className="text-2xl font-normal text-white text-justify text-wrap"> Solutions built to support your business.</p>
                 </div>
             </div>
             </div>
             {/* actual content */}
-            <div className="my-28 px-10 md:px-72 flex flex-col gap-8">
-                <h1 className="text-4xl font-bold text-[#045364] text-ceter pb-5">Easy, speedy online shipping tools</h1>
-                <div className="flex items-center top gap-10">
+            <div className="my-5 md:my-20 lg:my-28 px-10 md:px-10 lg:px-72 flex flex-col gap-8">
+                <h1 className="text-lg md:text-4xl font-bold text-[#045364] text-ceter pb-5">Easy, speedy online shipping tools</h1>
+                <div className="flex flex-col md:flex-row items-center top gap-10">
                     <div className="w-full md:w-1/2 h-ull">
                         <div className='w-full h-ull rounded-md'>
                             <img src={bg8} className='w-full h-full object-cover object-left rounded-md' />
                         </div>
                     </div>
                     <div className="w-full md:w-1/2 flex flex-col gap-5 p-5">
-                        <h1 className="text-4xl font-bold text-[#045364] text-ceter">New Swift Ship Manager™</h1>
+                        <h1 className="text-lg md:text-4xl font-bold text-[#045364] text-ceter">New Swift Ship Manager™</h1>
                         <p className="text-base font-normal text-gray-700 text-justify">From creating super-quick shipments to printing labels with ease – everyone is turning to this latest tool to help them ship</p>
                         <button className="text-2xl px-8 py-3 w-fit rounded bg-[#045364] text-white">Ship Online</button>
                     </div>
                 </div>
                 {/* cards */}
-                <div className='mt-10 grid grid-cols-1 md:grid-cols-3  justify-evenly items-center'>  
-                        <div className='w-80 h-96 bg-[#045364] rounded-md flex flex-col gap-7 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364] px-5'>
+                <div className='mt-10 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 justify-evenly items-center'>  
+                        <div className='w-full md:w-80 h-96 bg-[#045364] rounded-md flex flex-col gap-7 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364] px-5'>
                             <BsBoxSeam className='text-6xl'/>
                             Calculate rates
                             <p className="text-base font-normal text-center">Get a quick quote or log into your account for personalized or discounted rates.</p>
                             <button className="px-8 py-2 border-2 border-white text-base font-normal">Shipping Rates</button>
                         </div>
 
-                        <div className='w-80 h-96 bg-[#045364] rounded-md flex flex-col gap-7 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364] px-5'>
+                        <div className='w-full md:w-80 h-96 bg-[#045364] rounded-md flex flex-col gap-7 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364] px-5'>
                             <CiDeliveryTruck  className='text-6xl'/>
                             Schedule pickups
                             <p className="text-base font-normal  text-center">Need to reschedule a pickup? It's easy – you can update or cancel a pickup even after booking a shipment.</p>
                             <button className="px-8 py-2 border-2 border-white text-base font-normal">Pickup Planner</button>
                         </div>
 
-                        <div className='w-80 h-96 bg-[#045364] rounded-md flex flex-col gap-7 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364] px-5'>
+                        <div className='w-full md:w-80 h-96 bg-[#045364] rounded-md flex flex-col gap-7 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364] px-5'>
                             <TbCurrentLocation   className='text-6xl'/>
                             Track shipments
                             <p className="text-base font-normal text-center">Keep an eye on all your shipments with custom overviews and detailed tracking updates</p>

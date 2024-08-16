@@ -24,7 +24,7 @@ const About = () => {
             <div className="my-28 px-10 md:px-72 flex flex-col gap-8">
                 <h1 className="text-4xl font-bold text-[#045364] text-ceter pb-5">Our solutions connect people and possibilities.</h1>
                 <p className="text-base font-normal text-gray-700 text-justify">Connecting people with goods, services and ideas creates opportunities and improves lives. At FedEx, we believe that a connected world is a better world, and that belief guides everything we do.</p>
-                <div className="flex items-center top gap-10">
+                <div className="flex flex-col md:flex-row items-center top gap-10">
                     <div className="w-full md:w-1/2 h-ull">
                         <div className='w-full h-ull rounded-md'>
                             <img src={bg14} className='w-full h-full object-cover object-left rounded-md' />
@@ -36,7 +36,7 @@ const About = () => {
                         <button className="text-2xl px-8 py-3 w-fit rounded bg-[#045364] text-white">Learn More</button>
                     </div>
                 </div>
-                <div className="flex flex-row-reverse items-center top gap-10">
+                <div className="flex flex-col md:flex-row-reverse items-center top gap-10">
                     <div className="w-full md:w-1/2 h-ull">
                         <div className='w-full h-ull rounded-md'>
                             <img src={bg15} className='w-full h-full object-cover object-left rounded-md' />
@@ -49,7 +49,7 @@ const About = () => {
                     </div>
                 </div>
                 {/* cards */}
-                <div className='mt-10 grid grid-cols-1 md:grid-cols-3  justify-evenly items-center'>  
+                <div className='mt-10 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0  justify-evenly items-center'>  
                         <div className='w-80 h-96 bg-[#045364] rounded-md flex flex-col gap-7 justify-center items-center text-2xl text-white font-semibold hover:bg-white hover:text-[#045364] hover:border-4 hover:border-[#045364] px-5'>
                             <BsInfoSquareFill className='text-4xl'/>
                             Global Newsroom

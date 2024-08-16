@@ -2,6 +2,10 @@ import Navbar from "./Navbar";
 import bg7 from '../Images/bg7.jpg';
 import { useState } from "react";
 import { Form } from "react-router-dom";
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const ShipQuick = () => {
 
     const [verified, setVerified] = useState(false);
@@ -42,40 +46,74 @@ const ShipQuick = () => {
         const card = e.target.elements.card.value;
         const online = e.target.elements.online.value;
         
-        // WhatsApp number
-        const whatsappNumber = "+8801846937397"; 
+        const newOrders = {orderId, from_name, from_company, from_country, from_address, from_postalcode, from_city, to_name, to_company, to_country, to_address, to_postalcode, to_city, package_contains, num_of_packages, weight, servicetype, packagetype,  dimensions , shipdate, description, camage,custom, bankpayments, card , online}
+
+        const orderPlaced = "true";
+        const packageProcessingStarted = "false";
+        const redayToShip = "false";
+        const reachedLogistic = "false";
+        const shipped = "false";
+        const outForDelivery = "false";
+        const delivered = "false";
+        const deliveryFailed = "false";
+
+        const newTrack = {orderId, orderPlaced, packageProcessingStarted, redayToShip, reachedLogistic, shipped, outForDelivery, delivered, deliveryFailed}
+
+        // // WhatsApp number
+        // const whatsappNumber = "+8801846937397"; 
     
-        // Build WhatsApp URL
-        const url = "https://wa.me/" + whatsappNumber + "?text="
-        + "*Order ID:* " + orderId + "%0a%0a"  // Include order ID
-        + "*From Name:* " + from_name + "%0a"
-        + "*From Company:* " + from_company + "%0a"
-        + "*From Country:* " + from_country + "%0a"
-        + "*From Address:* " + from_address + "%0a"
-        + "*From Postal Code:* " + from_postalcode + "%0a"
-        + "*From City:* " + from_city + "%0a%0a"
-        + "*To Name:* " + to_name + "%0a"
-        + "*To Company:* " + to_company + "%0a"
-        + "*To Country:* " + to_country + "%0a"
-        + "*To Address:* " + to_address + "%0a"
-        + "*To Postal Code:* " + to_postalcode + "%0a"
-        + "*To City:* " + to_city + "%0a%0a"
-        + "*Package Contains:* " + package_contains + "%0a"
-        + "*Number of Packages:* " + num_of_packages + "%0a"
-        + "*Weight:* " + weight + "%0a"
-        + "*Service Type:* " + servicetype + "%0a"
-        + "*Package Type:* " + packagetype + "%0a"
-        + "*Dimensions:* " + dimensions + "%0a"
-        + "*Ship Date:* " + shipdate + "%0a%0a"
-        + "*Description:* " + description + "%0a"
-        + "*Camage:* " + camage + "%0a%0a"
-        + "*Custom:* " + custom + "%0a"
-        + "*Bank Payments:* " + bankpayments + "%0a"
-        + "*Card:* " + card + "%0a"
-        + "*Online:* " + online + "%0a";
+        // // Build WhatsApp URL
+        // const url = "https://wa.me/" + whatsappNumber + "?text="
+        // + "*Order ID:* " + orderId + "%0a%0a"  // Include order ID
+        // + "*From Name:* " + from_name + "%0a"
+        // + "*From Company:* " + from_company + "%0a"
+        // + "*From Country:* " + from_country + "%0a"
+        // + "*From Address:* " + from_address + "%0a"
+        // + "*From Postal Code:* " + from_postalcode + "%0a"
+        // + "*From City:* " + from_city + "%0a%0a"
+        // + "*To Name:* " + to_name + "%0a"
+        // + "*To Company:* " + to_company + "%0a"
+        // + "*To Country:* " + to_country + "%0a"
+        // + "*To Address:* " + to_address + "%0a"
+        // + "*To Postal Code:* " + to_postalcode + "%0a"
+        // + "*To City:* " + to_city + "%0a%0a"
+        // + "*Package Contains:* " + package_contains + "%0a"
+        // + "*Number of Packages:* " + num_of_packages + "%0a"
+        // + "*Weight:* " + weight + "%0a"
+        // + "*Service Type:* " + servicetype + "%0a"
+        // + "*Package Type:* " + packagetype + "%0a"
+        // + "*Dimensions:* " + dimensions + "%0a"
+        // + "*Ship Date:* " + shipdate + "%0a%0a"
+        // + "*Description:* " + description + "%0a"
+        // + "*Camage:* " + camage + "%0a%0a"
+        // + "*Custom:* " + custom + "%0a"
+        // + "*Bank Payments:* " + bankpayments + "%0a"
+        // + "*Card:* " + card + "%0a"
+        // + "*Online:* " + online + "%0a";
     
-        // Open WhatsApp with the generated URL
-        window.open(url, '_blank').focus();
+        // // Open WhatsApp with the generated URL
+        // window.open(url, '_blank').focus();
+
+        // fetch data using axios 
+        axios.post('http://localhost:5000/orders', newOrders)
+          .then(data => {
+            if(data.data.insertedId){
+                //   post to track list
+                axios.post('http://localhost:5000/track', newTrack )
+                .then(data => {
+                if(data.data.insertedId){
+                    toast.success(`Order Placed successfully. Your Order ID: ${orderId}. Please note that to track your order`);
+                }
+                })
+                .catch(function (error) {
+                console.log(error);
+                });     
+            }
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+          
     };
     
     return (
@@ -87,8 +125,8 @@ const ShipQuick = () => {
                 backgroundPosition: 'center'
             }}>
             <Navbar></Navbar>
-            <form onSubmit={handleOrder} className="py-16 px-32">
-                <div className="flex gap-20 justify-between items-center">
+            <form onSubmit={handleOrder} className="py-16 px-5 md:px-32">
+                <div className="flex flex-col md:flex-row gap-5 md:gap-20 justify-between items-center">
                     {/* form 1 */}
                     <div className="w-full h-full glass p-10 rounded-md">
                         <h1 className="text-white pb-5">From Address</h1>
@@ -171,7 +209,7 @@ const ShipQuick = () => {
 
 
                 {/* second row of form */}
-                <div className="flex gap-20 justify-between items-top pt-16">
+                <div className="flex flex-col md:flex-row gap-5 md:gap-20 justify-between items-top pt-16">
                     {/* form 3 */}
                     <div className="w-full h-full glass p-10 rounded-md">
                         <h1 className="text-white pb-5">Shipment Details</h1>
@@ -243,7 +281,7 @@ const ShipQuick = () => {
                         <h1 className="text-white pb-5">Payment Details</h1>
                         <div className='flex flex-col w-full gap-5 border-none'>
 
-                            <input type="bank" name="bankpayments" placeholder='Bank Payments' className='py-2 px-5  rounded text-base text-black' required/>
+                            <input type="bank" name="bankpayments" placeholder='Bank Payments' className='py-2 px-5  rounded text-base text-black'/>
 
                             {/* input fields */}
                             <select name="card" className="py-2 px-5 rounded text-base text-black">

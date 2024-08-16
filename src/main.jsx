@@ -20,6 +20,9 @@ import Registration from './Compononets/Registration.jsx';
 import ShipQuick from './Compononets/ShipQuick.jsx';
 import ShipService from './Compononets/ShipService.jsx';
 import TimeTable from './Compononets/TimeTable.jsx';
+import BannerHeader from './Compononets/BannerHeader.jsx';
+import AllOrders from './Compononets/AllOrders.jsx';
+import UpdateTrack from './Compononets/UpdateTrack.jsx';
 const router = createBrowserRouter([ 
   {
     path: "/",
@@ -72,6 +75,20 @@ const router = createBrowserRouter([
       {
         path: "/timetable",
         element: <PrivateRoute><TimeTable></TimeTable></PrivateRoute>,
+      },
+      {
+        path: "/track",
+        element: <PrivateRoute><BannerHeader></BannerHeader></PrivateRoute>,
+      },
+      {
+        path: "/allorders",
+        element: <PrivateRoute><AllOrders></AllOrders></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/orders')
+      },
+      {
+        path: "/updatetrack",
+        element: <PrivateRoute><UpdateTrack></UpdateTrack></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/track')
       },
       
     ],
