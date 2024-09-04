@@ -59,55 +59,56 @@ const ShipQuick = () => {
 
         const newTrack = {orderId, orderPlaced, packageProcessingStarted, redayToShip, reachedLogistic, shipped, outForDelivery, delivered, deliveryFailed}
 
-        // // WhatsApp number
-        // const whatsappNumber = "+8801846937397"; 
-    
-        // // Build WhatsApp URL
-        // const url = "https://wa.me/" + whatsappNumber + "?text="
-        // + "*Order ID:* " + orderId + "%0a%0a"  // Include order ID
-        // + "*From Name:* " + from_name + "%0a"
-        // + "*From Company:* " + from_company + "%0a"
-        // + "*From Country:* " + from_country + "%0a"
-        // + "*From Address:* " + from_address + "%0a"
-        // + "*From Postal Code:* " + from_postalcode + "%0a"
-        // + "*From City:* " + from_city + "%0a%0a"
-        // + "*To Name:* " + to_name + "%0a"
-        // + "*To Company:* " + to_company + "%0a"
-        // + "*To Country:* " + to_country + "%0a"
-        // + "*To Address:* " + to_address + "%0a"
-        // + "*To Postal Code:* " + to_postalcode + "%0a"
-        // + "*To City:* " + to_city + "%0a%0a"
-        // + "*Package Contains:* " + package_contains + "%0a"
-        // + "*Number of Packages:* " + num_of_packages + "%0a"
-        // + "*Weight:* " + weight + "%0a"
-        // + "*Service Type:* " + servicetype + "%0a"
-        // + "*Package Type:* " + packagetype + "%0a"
-        // + "*Dimensions:* " + dimensions + "%0a"
-        // + "*Ship Date:* " + shipdate + "%0a%0a"
-        // + "*Description:* " + description + "%0a"
-        // + "*Camage:* " + camage + "%0a%0a"
-        // + "*Custom:* " + custom + "%0a"
-        // + "*Bank Payments:* " + bankpayments + "%0a"
-        // + "*Card:* " + card + "%0a"
-        // + "*Online:* " + online + "%0a";
-    
-        // // Open WhatsApp with the generated URL
-        // window.open(url, '_blank').focus();
 
         // fetch data using axios 
-        axios.post('swiftship-server-kohl.vercel.app/orders', newOrders)
+        axios.post('https://swiftship-server-kohl.vercel.app/orders', newOrders)
           .then(data => {
             if(data.data.insertedId){
                 //   post to track list
-                axios.post('swiftship-server-kohl.vercel.app/track', newTrack )
+                axios.post('https://swiftship-server-kohl.vercel.app/track', newTrack )
                 .then(data => {
                 if(data.data.insertedId){
                     toast.success(`Order Placed successfully. Your Order ID: ${orderId}. Please note that to track your order`);
-                }
+
+                    // sending orders to whatsapp aswell 
+                        // WhatsApp number
+                        const whatsappNumber = "+8801846937397"; 
+                    
+                        // Build WhatsApp URL
+                        const url = "https://wa.me/" + whatsappNumber + "?text="
+                        + "*Order ID:* " + orderId + "%0a%0a"  // Include order ID
+                        + "*From Name:* " + from_name + "%0a"
+                        + "*From Company:* " + from_company + "%0a"
+                        + "*From Country:* " + from_country + "%0a"
+                        + "*From Address:* " + from_address + "%0a"
+                        + "*From Postal Code:* " + from_postalcode + "%0a"
+                        + "*From City:* " + from_city + "%0a%0a"
+                        + "*To Name:* " + to_name + "%0a"
+                        + "*To Company:* " + to_company + "%0a"
+                        + "*To Country:* " + to_country + "%0a"
+                        + "*To Address:* " + to_address + "%0a"
+                        + "*To Postal Code:* " + to_postalcode + "%0a"
+                        + "*To City:* " + to_city + "%0a%0a"
+                        + "*Package Contains:* " + package_contains + "%0a"
+                        + "*Number of Packages:* " + num_of_packages + "%0a"
+                        + "*Weight:* " + weight + "%0a"
+                        + "*Service Type:* " + servicetype + "%0a"
+                        + "*Package Type:* " + packagetype + "%0a"
+                        + "*Dimensions:* " + dimensions + "%0a"
+                        + "*Ship Date:* " + shipdate + "%0a%0a"
+                        + "*Description:* " + description + "%0a"
+                        + "*Camage:* " + camage + "%0a%0a"
+                        + "*Custom:* " + custom + "%0a"
+                        + "*Bank Payments:* " + bankpayments + "%0a"
+                        + "*Card:* " + card + "%0a"
+                        + "*Online:* " + online + "%0a";
+                    
+                        // Open WhatsApp with the generated URL
+                        window.open(url, '_blank').focus();
+
+                    }
                 })
-                .catch(function (error) {
-                console.log(error);
-                });     
+                
             }
           })
           .catch(function (error) {
@@ -116,6 +117,7 @@ const ShipQuick = () => {
           
     };
     
+
     return (
         <div>
             <div className="relative w-full h-full shadow-2xl" 

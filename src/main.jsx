@@ -83,12 +83,12 @@ const router = createBrowserRouter([
       {
         path: "/allorders",
         element: <PrivateRoute><AllOrders></AllOrders></PrivateRoute>,
-        loader: () => fetch('swiftship-server-kohl.vercel.app/orders')
+        loader: () => fetch('https://swiftship-server-kohl.vercel.app/orders')
       },
       {
         path: "/updatetrack",
         element: <PrivateRoute><UpdateTrack></UpdateTrack></PrivateRoute>,
-        loader: () => fetch('swiftship-server-kohl.vercel.app/track')
+        loader: () => fetch('https://swiftship-server-kohl.vercel.app/track')
       },
       
     ],

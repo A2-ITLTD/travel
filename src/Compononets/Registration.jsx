@@ -68,11 +68,11 @@ const Registration = () => {
                 backgroundPosition: 'center'
             }}>
             <Navbar></Navbar>
-            <div className="flex justify-between gap-20 items-center w-4/5 mx-auto py-10">
+            <div className="flex flex-col md:flex-row justify-between gap-5 md:gap-20 items-center w-4/5 mx-auto py-2 md:py-10">
                 <div className="p-5 ">
                     <div>
-                        <h1 className="text-6xl font-bold text-white text-ceter pb-10">Register Here!</h1>
-                        <h1 className="text-2xl font-bold text-white text-ceter pb-10">
+                        <h1 className="text-lg md:text-6xl font-bold text-white text-ceter pb-2 md:pb-10">Register Here!</h1>
+                        <h1 className="text-lg md:text-2xl font-bold text-white text-ceter pb-2 md:pb-10">
                             Already Have and Account ? 
                             <Link to="/Login" className="text-[#53fff4]"> Login </Link>
                             Here</h1>
@@ -80,7 +80,7 @@ const Registration = () => {
                 </div>
                 {/* <input type="text" name="user_name" placeholder='Name' className='py-2 px-5 rounded text-base text-black' /> */}
                 {/* form */}
-                <div className="w-1/2 glass p-10 rounded-md">
+                <div className="w-full md:w-1/2 glass p-2 md:p-10 rounded-md">
                 <form onSubmit={handleRegistration} className="card-body">
                         <div className="form-control">
                         <label className="label">

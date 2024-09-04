@@ -25,7 +25,7 @@ const BannerHeader = () => {
         console.log("Tracking ID:", trackId);
     
         try {
-            const response = await axios.get(`swiftship-server-kohl.vercel.app/track/${trackId}`);
+            const response = await axios.get(`https://swiftship-server-kohl.vercel.app/track/${trackId}`);
             setTrackingData(response.data[0]);
             document.getElementById('my_modal_3').showModal();
         } catch (error) {
